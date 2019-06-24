@@ -1,6 +1,7 @@
 package com.flipflipom.Base;
 
 import com.flipflipom.HomePage.ElectronicsSection;
+import com.flipflipom.HomePage.MenSection;
 import com.flipflipom.HomePage.TVNAppliancesSection;
 
 public class TopMenu extends Base{
@@ -14,8 +15,9 @@ public class TopMenu extends Base{
 		Base.ClickElement("HomePageTvAndAppliances.CSS");
 		return new TVNAppliancesSection();
 	}
-	public void goToMen() {
+	public MenSection goToMen() {
 		Base.ClickElement("HomePageMenTab.CSS");
+		return new MenSection();
 	}
 	public void goToWomen() {
 		Base.ClickElement("HomePageWomenTab.CSS");
