@@ -1,8 +1,12 @@
 package com.flipflipom.Base;
 
+import com.flipflipom.HomePage.BabyAndKidsSection;
 import com.flipflipom.HomePage.ElectronicsSection;
+import com.flipflipom.HomePage.HomeAndFurnitureSection;
 import com.flipflipom.HomePage.MenSection;
+import com.flipflipom.HomePage.SpoortsBooksAndMoreSection;
 import com.flipflipom.HomePage.TVNAppliancesSection;
+import com.flipflipom.HomePage.WomenSection;
 
 public class TopMenu extends Base{
 
@@ -19,17 +23,21 @@ public class TopMenu extends Base{
 		Base.ClickElement("HomePageMenTab.CSS");
 		return new MenSection();
 	}
-	public void goToWomen() {
+	public WomenSection goToWomen() {
 		Base.ClickElement("HomePageWomenTab.CSS");
+		return new WomenSection();
 	}
-	public void goToBabyAndKids() {
+	public BabyAndKidsSection goToBabyAndKids() {
 		Base.ClickElement("HomePageBabyAndKids.CSS");
+		return new BabyAndKidsSection();
 	}
-	public void goToHomeNFurniture() {
+	public HomeAndFurnitureSection goToHomeNFurniture() {
 		Base.ClickElement("HomePageHomeNFurniture.CSS");
+		return new HomeAndFurnitureSection();
 	}
-	public void goToSpoortsBooks() {
+	public SpoortsBooksAndMoreSection goToSpoortsBooks() {
 		Base.ClickElement("HomePageSpoortsBooksMore.CSS");
+		return new SpoortsBooksAndMoreSection();
 	}
 	public void goToGrocery() {
 		Base.ClickElement("HomePageGrocery.CSS");
