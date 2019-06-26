@@ -10,6 +10,12 @@ public class ElectronicsSection extends Base{
 
 	public void selectMobile(String mobilePhoneName) {
 		Base.selectValueBasedOnName("ElectronicsFirstSection.CSS", mobilePhoneName);
+		if(mobilePhoneName.equals("Samsung")||mobilePhoneName.equals("OPPO")) {
+			Base.ClickElement("ViewAll.CSS");
+		}
+		else if(mobilePhoneName.equals("Apple")) {
+			Base.ClickElement("AppleViewAll.CSS");
+		}
 	}
 	
 	public void clickOnMobile() {
