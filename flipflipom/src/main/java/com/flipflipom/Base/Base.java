@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 
@@ -27,6 +28,7 @@ public class Base {
 	public static String browser;
 	public static FileInputStream fis;
 	public static TopMenu menu;
+	public static WebDriverWait wait= new WebDriverWait(Base.driver, 10);
 	
 	public Base() {
 		try {
@@ -123,6 +125,35 @@ public class Base {
 					ele1.findElement(By.className("_4IiNRh")).click();
 				}
 			}
+		}
+	}
+	
+	public static void validationAfterEveryClick() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(Base.driver.findElements(By.cssSelector(Base.OR.getProperty("noResultFound.CSS"))).size()!=0) {
+			System.out.println("element is prsent ..hence");
+			String textFieldName=Base.driver.findElement(By.cssSelector(Base.OR.getProperty("noResultFound.CSS"))).getText();
+			System.out.println("go back to the previous page to undo the setting");
+			Base.driver.navigate().back();
+		}
+		else
+		{
+			System.out.println("do nothing");
+		}
+	}
+	
+	public static void selectDefaultChoice(int flagVal,String locator) {
+		if(flagVal==1) {
+			System.out.println("do nothing");			
+		}
+		else {
+			System.out.println("click on the default first element");
+			Base.driver.findElement(By.cssSelector(locator)).click();		
 		}
 	}
 }
