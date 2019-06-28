@@ -6,6 +6,8 @@ public class TVNAppliancesSection extends Base{
 
 	public void selectTelevision() {
 		Base.selectValueBasedOnName("TvNAppliancesFirstSection.CSS", "Television");
+		Base.ClickElement("viewAllTV.CSS");
+		
 	}
 	
 	public void selectAndridTv() {

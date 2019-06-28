@@ -128,7 +128,8 @@ public class Base {
 		}
 	}
 	
-	public static void validationAfterEveryClick() {
+	public static int validationAfterEveryClick() {
+		int flag=0;
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
@@ -140,20 +141,15 @@ public class Base {
 			String textFieldName=Base.driver.findElement(By.cssSelector(Base.OR.getProperty("noResultFound.CSS"))).getText();
 			System.out.println("go back to the previous page to undo the setting");
 			Base.driver.navigate().back();
+			flag=1;
 		}
 		else
 		{
 			System.out.println("do nothing");
+			flag=0;
 		}
+		return flag;
 	}
 	
-	public static void selectDefaultChoice(int flagVal,String locator) {
-		if(flagVal==1) {
-			System.out.println("do nothing");			
-		}
-		else {
-			System.out.println("click on the default first element");
-			Base.driver.findElement(By.cssSelector(locator)).click();		
-		}
-	}
+	
 }
