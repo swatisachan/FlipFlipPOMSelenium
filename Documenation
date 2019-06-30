@@ -1,0 +1,19 @@
+
+/**
+This project is an automation of one the popular e-commerce site(Flipkart) using selenium web driver (Page Object Model). This on going 
+automation framework successfully provides the navigation of all of its tabs , hyperlinks etc based on user click along with providing 
+the complete functionlity of its sub tabs.
+
+For the common functionality/ features such as Top menu which appears in almost all the user action is a common utility for all the action 
+classes which is being encapslated inside the Base class/Parent class, so as to provide the data hiding as well.
+
+Data is taken from the excel sheet by implementing apache poi in a Maven project.
+
+Functonality such as user filter ie price, availiblity , discount , etc which apperas to be in most of the tabs while clicking any of the 
+option  present in Top menu is a commong feature and being present in a separate class inherting the Base class.
+
+Common features such as Apache poi, Log4j, properties, TestNG reports, Listsners etc are successfully implemented as part of this automation
+framework.
+
+* @author swati sachan
+*/
