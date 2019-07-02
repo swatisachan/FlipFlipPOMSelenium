@@ -1,6 +1,7 @@
 package com.flipflipom.HomePage;
 
 import com.flipflipom.Base.Base;
+import com.flipflipom.mainPage.MainPage;
 
 /**
  * @author swati sachan
@@ -8,7 +9,7 @@ import com.flipflipom.Base.Base;
  */
 public class ElectronicsSection extends Base{
 
-	public void selectMobile(String mobilePhoneName) {
+	public MainPage selectMobile(String mobilePhoneName) {
 		Base.selectValueBasedOnName("ElectronicsFirstSection.CSS", mobilePhoneName);
 		if(mobilePhoneName.equals("Samsung")||mobilePhoneName.equals("OPPO")) {
 			Base.ClickElement("ViewAll.CSS");
@@ -16,110 +17,141 @@ public class ElectronicsSection extends Base{
 		else if(mobilePhoneName.equals("Apple")) {
 			Base.ClickElement("AppleViewAll.CSS");
 		}
+		return new MainPage();
 	}
 	
-	public void clickOnMobile() {
+	public MainPage clickOnMobile() {
 		Base.ClickElement("ElectronicsFirstSectionMobiles.CSS");
+		return new MainPage();
 	}
 	
 	
-	public void selectMobileAccessories(String mobileAccessroiesName) {
+	public MainPage selectMobileAccessories(String mobileAccessroiesName) {
 		Base.selectValueBasedOnName("ElectronicsSecondSection.CSS", mobileAccessroiesName);
+		return new MainPage();
 	}
 	
-	public void clickOnMobileAccessories() {
+	public MainPage clickOnMobileAccessories() {
 		Base.ClickElement("ElectronicsSecondSectionMobileAccess.CSS");
+		return new MainPage();
 	}
 	
 	
-	public void selectSmartWearableTech(String smartTechName) {
+	public MainPage selectSmartWearableTech(String smartTechName) {
 		Base.selectValueBasedOnName("ElectronicsSecondSection.CSS", smartTechName);
+		return new MainPage();
 	}
 	
-	public void clickOnSmartTech() {
+	public MainPage clickOnSmartTech() {
 		Base.ClickElement("ElectronicsSecondSectionSmartWearableTech.CSS");
+		return new MainPage();
 	}
 	
-	public void selectHealthCareAppliances(String appliName) {
+	public MainPage selectHealthCareAppliances(String appliName) {
 		Base.selectValueBasedOnName("ElectronicsSecondSection.CSS", appliName);
+		return new MainPage();
 	}
 	
-	public void clickOnHealthCareAppliances() {
+	public MainPage clickOnHealthCareAppliances() {
 		Base.ClickElement("ElectronicsSecondSectionHealthCareAppli.CSS");
+		return new MainPage();
 	}
 	
-	public void clickOnLaptop() {
+	public MainPage clickOnLaptop() {
 		Base.ClickElement("ElectronicsThirdSectionLaptop.CSS");
+		return new MainPage();
 	}
 	
-	public void clickOneGamingLaptop() {
+	public MainPage clickOneGamingLaptop() {
 		Base.ClickElement("ElectronicsThirdSectionGaming.CSS");
+		return new MainPage();
 	}
-	public void clickOnDesktopPCs() {
+	public MainPage clickOnDesktopPCs() {
 		Base.ClickElement("ElectronicsThirdSectionDesktop.CSS");
+		return new MainPage();
 	}
-	public void clickOnGamingAndAccesroies() {
+	public MainPage clickOnGamingAndAccesroies() {
 		Base.ClickElement("ElectronicsThirdSectionGamingAcc.CSS");
+		return new MainPage();
 	}
-	public void clickOnComputerAcces() {
+	public MainPage clickOnComputerAcces() {
 		Base.ClickElement("ElectronicsThirdSectionGamingAcc.CSS");
+		return new MainPage();
 	}
-	public void selectComputerAccess(String computerAccName) {
+	public MainPage selectComputerAccess(String computerAccName) {
 		Base.ClickElement("EletronicsThirdSectionComputerAcc.CSS");
+		return new MainPage();
 	}
-	public void clickOnComputerPheripharls() {
+	public MainPage clickOnComputerPheripharls() {
 		Base.ClickElement("ElectronicsThirdSectionComputerPeri.CSS");
+		return new MainPage();
 	}
-	public void selectComputerPheripharals(String computerPheri) {
+	public MainPage selectComputerPheripharals(String computerPheri) {
 		Base.selectValueBasedOnName("ElectronicsThirdSection.CSS", computerPheri);
+		return new MainPage();
 	}
-	public void clickOnTablets(String valueToSelect) {
+	public MainPage clickOnTablets(String valueToSelect) {
 		Base.selectValueBasedOnName("ElectronicsThirdSection.CSS", valueToSelect);
+		return new MainPage();
 	}
-	public void clickOnAppleiPads(String valueToSelect) {
+	public MainPage clickOnAppleiPads(String valueToSelect) {
 		Base.selectValueBasedOnName("ElectronicsThirdSection.CSS", valueToSelect);
+		return new MainPage();
 	}
-	public void clickOnTelevisions(String valueToSelect) {
+	public MainPage clickOnTelevisions(String valueToSelect) {
 		Base.selectValueBasedOnName("ElectronicsFourthSection.CSS", valueToSelect);
+		return new MainPage();
 	}
 	
-	public void clickOnSpeakers(String valueToSelect) {
+	public MainPage clickOnSpeakers(String valueToSelect) {
 		Base.selectValueBasedOnName("ElectronicsFourthSection.CSS", valueToSelect);
+		return new MainPage();
 	}
-	public void selectSpeakers(String speakerName) {
+	public MainPage selectSpeakers(String speakerName) {
 		Base.selectValueBasedOnName("ElectronicsFourthSection.CSS", speakerName);
+		return new MainPage();
 	}
 	
-	public void clickOnSmartHomeAutomation(String valueToSelect) {
+	public MainPage clickOnSmartHomeAutomation(String valueToSelect) {
 		Base.selectValueBasedOnName("ElectronicsFourthSection.CSS", valueToSelect);
+		return new MainPage();
 	}
-	public void clickOnGoogleHome(String valueToSelect) {
+	public MainPage clickOnGoogleHome(String valueToSelect) {
 		Base.selectValueBasedOnName("ElectronicsFourthSection.CSS", valueToSelect);
+		return new MainPage();
 	}
-	public void clickOnCamera(String valueToSelect) {
+	public MainPage clickOnCamera(String valueToSelect) {
 		Base.selectValueBasedOnName("ElectronicsFourthSection.CSS", valueToSelect);
+		return new MainPage();
 	}
-	public void selectCamera(String cameraName) {
+	public MainPage selectCamera(String cameraName) {
 		Base.selectValueBasedOnName("ElectronicsFourthSection.CSS", cameraName);
+		return new MainPage();
 	}
 	
-	public void clickOnCameraAccess(String valueToSelect) {
+	public MainPage clickOnCameraAccess(String valueToSelect) {
 		Base.selectValueBasedOnName("ElectronicsFourthSection.CSS", valueToSelect);
+		return new MainPage();
 	}
-	public void selectCameraAccess(String cameraAccName) {
+	public MainPage selectCameraAccess(String cameraAccName) {
 		Base.selectValueBasedOnName("ElectronicsFourthSection.CSS", cameraAccName);
+		return new MainPage();
 	}
-	public void clickOnNetworkComponents(String valueToSelect) {
+	public MainPage clickOnNetworkComponents(String valueToSelect) {
 		Base.selectValueBasedOnName("ElectronicsFourthSection.CSS", valueToSelect);
+		return new MainPage();
 	}
-	public void clickOnRouters(String valueToSelect) {
+	public MainPage clickOnRouters(String valueToSelect) {
 		Base.selectValueBasedOnName("ElectronicsFourthSection.CSS", valueToSelect);
+		return new MainPage();
 	}
-	public void clickOnFeatured(String valueToSelect) {
+	public MainPage clickOnFeatured(String valueToSelect) {
 		Base.selectValueBasedOnName("ElectronicsFivthSection.CSS", valueToSelect);
+		return new MainPage();
 	}
-	public void selectFeaturedOption(String optionName) {
+	public MainPage selectFeaturedOption(String optionName) {
 		Base.selectValueBasedOnName("ElectronicsFivthSection.CSS", optionName);
+		return new MainPage();
 	}
 }
 

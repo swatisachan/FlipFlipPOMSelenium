@@ -11,6 +11,7 @@ import com.flipflipom.HomePage.WomenSection;
 public class TopMenu extends Base{
 
 	public ElectronicsSection goToElectronics() {
+		System.out.println("coming here");
 		Base.ClickElement("HomePageElectronicsTab.CSS");
 		return new ElectronicsSection();
 		

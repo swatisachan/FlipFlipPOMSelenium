@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
@@ -28,15 +29,15 @@ public class Base {
 	public static String browser;
 	public static FileInputStream fis;
 	public static TopMenu menu;
-	public static WebDriverWait wait= new WebDriverWait(Base.driver, 10);
+	public static WebDriverWait wait;
 	
 	public Base() {
 		try {
-			fis=  new FileInputStream(new File(System.getProperty("user.dir")+"src\\main\\Resoruces\\com\\flipflipom\\properties\\config.properties"));
+			fis=  new FileInputStream(new File("C:\\Users\\swati sachan\\git\\FlipFlipPOMSelenium\\flipflipom\\src\\main\\Resoruces\\com\\flipflipom\\properties\\config.properties"));
 			config= new Properties();
 			config.load(fis);
 			
-			fis= new FileInputStream(new File(System.getProperty("user.dir")+"src\\main\\Resoruces\\com\\flipflipom\\properties\\OR.properties"));
+			fis= new FileInputStream(new File("C:\\Users\\swati sachan\\git\\FlipFlipPOMSelenium\\flipflipom\\src\\main\\Resoruces\\com\\flipflipom\\properties\\OR.properties"));
 			OR= new Properties();
 			OR.load(fis);
 			
@@ -47,17 +48,23 @@ public class Base {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if(driver!=null) {
-			if(System.getenv("browser").equals("chrome") && System.getenv("browser")!=null) {
-				browser= System.getenv("browser");
-			}
-			else if(System.getenv("browser").equals("IE")&& System.getenv("browser")!=null) {
-				browser= System.getenv("browser");
-			}
-			else {
+		if(driver==null) {
+//			if(System.getenv("browser").equals("chrome") && System.getenv("browser")!=null) {
+//				browser= System.getenv("browser");
+//			}
+//			else if(System.getenv("browser").equals("IE")&& System.getenv("browser")!=null) {
+//				browser= System.getenv("browser");
+//			}
+//			else {
 				browser= config.getProperty("browser");
+		//	}
+			
+			if(browser.equals("chrome")) {
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\swati sachan\\git\\FlipFlipPOMSelenium\\flipflipom\\src\\main\\Resoruces\\com\\flipflipom\\executables\\chromedriver.exe");
+				driver= new ChromeDriver();
 			}
-			driver.navigate().to(browser);
+			driver.navigate().to(config.getProperty("baseSiteUrl"));
+			Base.ClickElement("CrossButton.CSS");
 			menu= new TopMenu();
 		}
 		
@@ -76,6 +83,7 @@ public class Base {
 	}
 	
 	public static void selectValueBasedOnName(String locator,String valueToSelect) {
+		locator= OR.getProperty(locator);
 		WebElement liEle=Base.driver.findElement(By.cssSelector(locator));
 		WebElement ulele=liEle.findElement(By.tagName("ul"));
 		List<WebElement> lists=ulele.findElements(By.tagName("li"));
