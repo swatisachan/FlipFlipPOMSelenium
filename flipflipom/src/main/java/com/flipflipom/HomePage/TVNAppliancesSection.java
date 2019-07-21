@@ -1,72 +1,96 @@
 package com.flipflipom.HomePage;
 
 import com.flipflipom.Base.Base;
+import com.flipflipom.mainPage.MainPage;
 
 public class TVNAppliancesSection extends Base{
 
-	public void selectTelevision() {
+	public MainPage selectTelevision() {
 		Base.selectValueBasedOnName("TvNAppliancesFirstSection.CSS", "Television");
 		Base.ClickElement("viewAllTV.CSS");
-		
+		return new MainPage();
 	}
 	
-	public void selectAndridTv() {
+	public MainPage selectAndridTv() {
 		Base.selectValueBasedOnName("TvNAppliancesFirstSection.CSS", "Android TVs");
+		return new MainPage();
 	}
-	public void selectSmartAndUltaHD() {
+	public MainPage selectSmartAndUltaHD() {
 		Base.selectValueBasedOnName("TvNAppliancesFirstSection.CSS", "Smart & Ultra HD");
+		return new MainPage();
 	}
 	
-	public void selectTopBrands(String topBrands) {
+	public MainPage selectTopBrands(String topBrands) {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Base.selectValueBasedOnName("TvNAppliancesFirstSection.CSS", topBrands);
+		return new MainPage();
 	}
-	public void selectShopByScreenSize(String screenSizeVal) {
+	public MainPage selectShopByScreenSize(String screenSizeVal) {
 		Base.selectValueBasedOnName("TvNAppliancesFirstSection.CSS", screenSizeVal);
+		return new MainPage();
 	}
-	public void selectAirConditions() {
+	public MainPage selectAirConditions() {
 		Base.selectValueBasedOnName("TvNAppliancesSecondSection.CSS", "Air Conditioners");
+		return new MainPage();
 	}
-	public void selectAirCondiTypes(String valueToSel) {
+	public MainPage selectAirCondiTypes(String valueToSel) {
 		Base.selectValueBasedOnName("TvNAppliancesSecondSection.CSS", valueToSel);
+		return new MainPage();
 	}
-	public void selectShopByBrand(String brandName) {
+	public MainPage selectShopByBrand(String brandName) {
 		Base.selectValueBasedOnName("TvNAppliancesSecondSection.CSS", brandName);
+		return new MainPage();
 	}
 	
-	public void selectRefrigrator() {
+	public MainPage selectRefrigrator() {
 		Base.selectValueBasedOnName("TvNAppliancesSecondSection.CSS", "Refrigerators");
+		return new MainPage();
 	}
 	
-	public void selectTypeOfRefrigtrator(String valueToSelect) {
+	public MainPage selectTypeOfRefrigtrator(String valueToSelect) {
 		Base.selectValueBasedOnName("TvNAppliancesSecondSection.CSS", valueToSelect);
+		return new MainPage();
 	}
 	
-	public void selectWashingmachine() {
+	public MainPage selectWashingmachine() {
 		Base.selectValueBasedOnName("TvNAppliancesSecondSection.CSS", "Washing Machine");
+		return new MainPage();
 	}
-	public void selectKitchenAppli() {
+	public MainPage selectKitchenAppli() {
 		Base.selectValueBasedOnName("TvNAppliancesThirdSection.CSS", "Kitchen Appliances");
+		return new MainPage();
 	}
-	public void selectKitchenAppliTypes(String valueToSelect) {
+	public MainPage selectKitchenAppliTypes(String valueToSelect) {
 		Base.selectValueBasedOnName("TvNAppliancesThirdSection.CSS", valueToSelect);
+		return new MainPage();
 	}
 	
-	public void selectHealthyLivingAppli() {
+	public MainPage selectHealthyLivingAppli() {
 		Base.selectValueBasedOnName("TvNAppliancesThirdSection.CSS", "Healthy Living Appliances");
+		return new MainPage();
 	}
 	
-	public void smallHomeAppliances() {
+	public MainPage smallHomeAppliances() {
 		Base.selectValueBasedOnName("TvNAppliancesFourthSection.CSS", "Small Home Appliances");
+		return new MainPage();
 	}
 	
-	public void selectTopBrandsInAppliances(String valueToSelect) {
+	public MainPage selectTopBrandsInAppliances(String valueToSelect) {
 		Base.selectValueBasedOnName("TvNAppliancesFourthSection.CSS", valueToSelect);
+		return new MainPage();
 	}
-	public void selectBuyingGuides(String valueToSelect) {
+	public MainPage selectBuyingGuides(String valueToSelect) {
 		Base.selectValueBasedOnName("TvNAppliancesFivthSection.CSS", valueToSelect);
+		return new MainPage();
 	}
 	
-	public void selectNewLaunches(String valueToSelect) {
+	public MainPage selectNewLaunches(String valueToSelect) {
 		Base.selectValueBasedOnName("TvNAppliancesFivthSection.CSS", valueToSelect);
+		return new MainPage();
 	}
 }

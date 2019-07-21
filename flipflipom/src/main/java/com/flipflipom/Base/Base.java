@@ -49,6 +49,7 @@ public class Base {
 			e.printStackTrace();
 		}
 		if(driver==null) {
+			System.out.println("m i null in times");
 //			if(System.getenv("browser").equals("chrome") && System.getenv("browser")!=null) {
 //				browser= System.getenv("browser");
 //			}
@@ -90,8 +91,10 @@ public class Base {
 		Iterator<WebElement> i= lists.iterator();
 		while(i.hasNext()) {
 			WebElement ele=	i.next();
+			if(ele.findElements(By.tagName("a")).size()>0) {
 			if(ele.findElement(By.tagName("a")).getAttribute("title").equals(valueToSelect)) {
 				ele.findElement(By.tagName("a")).click(); //here clicking on the entire a element rather than extracting the value from of href from a element
+			}
 			}
 		}
 	}
@@ -159,5 +162,9 @@ public class Base {
 		return flag;
 	}
 	
+	public static void quitBrowser() {
+		Base.driver.quit();
+		Base.driver=null;
+	}
 	
 }
